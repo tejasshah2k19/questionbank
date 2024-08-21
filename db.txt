@@ -1,0 +1,17 @@
+
+
+create database questionbank;
+
+use questionbank; 
+
+create table users(
+	userId int primary key auto_increment,
+	firstName varchar(30), 
+	lastName varchar(30),
+	email varchar(30) not null uniq,
+	password varchar(30),
+	gender varchar(7),
+	city varchar(25),
+	contactNum varchar(15),
+	role varchar(15)
+);
