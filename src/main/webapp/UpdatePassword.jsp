@@ -37,18 +37,29 @@
 							<div class="brand-logo">
 								<img src=" assets/images/logo.svg" alt="logo">
 							</div>
-							<h4>Hello! Enter your username</h4>
+							<h4> Update Password </h4>
 							<form class="pt-3" action="ForgotPasswordController" method="post">
 								<div class="form-group">
 									<input type="email" class="form-control form-control-lg"
 										id="exampleInputEmail1" placeholder="Email" name="email">
-									${error}
 								</div>
 								 
+								 
+								 <div class="form-group">
+									<input type="email" class="form-control form-control-lg"
+										id="exampleInputEmail1" placeholder="New Password" name="password">
+								</div>
+								
+								<div class="form-group">
+									<input type="email" class="form-control form-control-lg"
+										id="exampleInputEmail1" placeholder="OTP" name="otp">
+								</div>
+								
+								
 								<div class="mt-3 d-grid gap-2">
-									<button type="submit"
+									<a
 										class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
-										 >HELP ME!</button>
+										href=" index.html">UPDATE PASSWORD</a>
 								</div>
 							  
 								<div class="text-center mt-4 font-weight-light">
