@@ -11,6 +11,8 @@ public class UserBean {
 	private String email; 
 	private String contactNum;
 	private String role; 
+	private String otp; 
+	
 	public Integer getUserId() {
 		return userId;
 	}
@@ -64,6 +66,12 @@ public class UserBean {
 	}
 	public void setRole(String role) {
 		this.role = role;
+	}
+	public String getOtp() {
+		return otp;
+	}
+	public void setOtp(String otp) {
+		this.otp = otp;
 	} 
 	
 	

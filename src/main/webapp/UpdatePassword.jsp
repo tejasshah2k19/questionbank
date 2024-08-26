@@ -38,7 +38,7 @@
 								<img src=" assets/images/logo.svg" alt="logo">
 							</div>
 							<h4> Update Password </h4>
-							<form class="pt-3" action="ForgotPasswordController" method="post">
+							<form class="pt-3" action="UpdatePasswordController" method="post">
 								<div class="form-group">
 									<input type="email" class="form-control form-control-lg"
 										id="exampleInputEmail1" placeholder="Email" name="email">
@@ -46,26 +46,27 @@
 								 
 								 
 								 <div class="form-group">
-									<input type="email" class="form-control form-control-lg"
+									<input type="text" class="form-control form-control-lg"
 										id="exampleInputEmail1" placeholder="New Password" name="password">
 								</div>
 								
 								<div class="form-group">
-									<input type="email" class="form-control form-control-lg"
+									<input type="text" class="form-control form-control-lg"
 										id="exampleInputEmail1" placeholder="OTP" name="otp">
 								</div>
 								
 								
 								<div class="mt-3 d-grid gap-2">
-									<a
+									<button type="submit"
 										class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
-										href=" index.html">UPDATE PASSWORD</a>
+										>UPDATE PASSWORD</button>
 								</div>
 							  
 								<div class="text-center mt-4 font-weight-light">
 									Don't have an account? <a href="Signup.jsp"
 										class="text-primary">Create</a>
 								</div>
+								${error}
 							</form>
 						</div>
 					</div>

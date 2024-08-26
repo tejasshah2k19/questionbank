@@ -61,4 +61,55 @@ public class UserDao {
 		return null;
 	}
 
+	public void updateOtp(String otp, String email) {
+		try {
+			Connection con = DbConnection.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("update users set otp = ? where email = ?  ");
+			pstmt.setString(1, otp);
+			pstmt.setString(2, email);
+			pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public void updatePassword(UserBean user) {
+
+		try {
+			Connection con = DbConnection.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("update users set password = ? where email = ?  ");
+			pstmt.setString(1, user.getPassword());
+			pstmt.setString(2, user.getEmail());
+			pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public boolean checkOTP(UserBean user) {
+
+		try {
+			Connection con = DbConnection.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("select * from users where email = ? and otp =  ? ");
+
+			pstmt.setString(1, user.getEmail());
+			pstmt.setString(2, user.getOtp());
+
+			ResultSet rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				return true;
+			}else {
+				return false;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
 }

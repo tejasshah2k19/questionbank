@@ -64,7 +64,7 @@ public class ForgotPasswordController extends HttpServlet {
 			// Get the default Session object.
 			Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
 				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication("tejasshah2k19@gmail.com", "ynjynsnplhvqutud");
+					return new PasswordAuthentication("tejasshah2k19@gmail.com", "hygklhaurwdvavpx");
 				}
 			});
 
@@ -89,6 +89,12 @@ public class ForgotPasswordController extends HttpServlet {
 
 				System.out.println("Sent message successfully...");
 
+				
+				//db otp set -> 
+				//db query => column -> otp 
+				//-> update users set otp = ? where email = ? 
+				//dao 
+				userDao.updateOtp(otp,email);
 			} catch (MessagingException e) {
 				throw new RuntimeException(e);
 			}

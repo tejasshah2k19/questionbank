@@ -56,6 +56,7 @@
                     <button type="button" class="btn btn-block btn-facebook auth-form-btn">
                       <i class="ti-facebook me-2"></i>Connect using facebook </button>
                   </div>
+                  ${msg}
                   <div class="text-center mt-4 font-weight-light"> Don't have an account? <a href="Signup.jsp" class="text-primary">Create</a>
                   </div>
                 </form>
