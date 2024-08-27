@@ -1,0 +1,13 @@
+login -> 
+		admin : question add list delete edit 
+		user  : search , view , 
+		
+how we can identify who is logged in ?
+when use login , we will get the role and check 
+		if role is ADMIN -> redirect to admin home page 
+		if role is STUDENT -> redirect to student home page 
+		
+Login.jsp-> 
+email and password ->  db present -> yes -> email ->role? 
+		which role is present in that email -> 
+		
