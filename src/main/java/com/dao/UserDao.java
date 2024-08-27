@@ -112,4 +112,34 @@ public class UserDao {
 		return false;
 	}
 
+	public UserBean authenticate(String email,String password) {
+
+		try {
+			Connection con = DbConnection.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("select * from users where email = ? and password = ? ");
+
+			pstmt.setString(1, email);
+			pstmt.setString(2, password);
+
+			ResultSet rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				UserBean userBean = new UserBean();
+				userBean.setFirstName(rs.getString("firstName"));
+				userBean.setEmail(email);
+				userBean.setCity(rs.getString("city"));
+				userBean.setContactNum(rs.getString("contactNum"));
+				userBean.setGender(rs.getString("gender"));
+				userBean.setLastName(rs.getString("lastName"));
+				userBean.setRole(rs.getString("role"));
+				userBean.setUserId(rs.getInt("userId"));
+				return userBean;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 }
