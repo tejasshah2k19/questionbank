@@ -11,3 +11,4 @@ Login.jsp->
 email and password ->  db present -> yes -> email ->role? 
 		which role is present in that email -> 
 		
+----------------------------
