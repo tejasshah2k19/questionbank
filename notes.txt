@@ -11,4 +11,13 @@ Login.jsp->
 email and password ->  db present -> yes -> email ->role? 
 		which role is present in that email -> 
 		
-----------------------------
+------------------------------------------------------------
+
+
+form submit -> method="post" ->servlet doPost
+	doGet 
+	
+	
+	hyperlink -> url -> http -> GET -> doGet 
+	form -> method="post" -> http -> POST -> doPost   
+---------------------------------------------------------

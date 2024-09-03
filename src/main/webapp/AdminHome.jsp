@@ -3,10 +3,7 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-<jsp:include page="AllCss.jsp"></jsp:include>
-</head>
+ 
 <body>
 
 	<!-- partial:partials/_navbar.html -->
@@ -99,6 +96,5 @@
 		</div>
 		<!-- main-panel ends -->
 	</div>
-	 <jsp:include page="AllJs.jsp"></jsp:include>
-</body>
+ </body>
 </html>

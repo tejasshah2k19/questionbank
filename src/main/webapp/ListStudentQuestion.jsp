@@ -7,9 +7,6 @@
 
 </head>
 <body>
-	
-
-
 
 	<!-- partial:partials/_navbar.html -->
 	<jsp:include page="StudentHeader.jsp"></jsp:include>
