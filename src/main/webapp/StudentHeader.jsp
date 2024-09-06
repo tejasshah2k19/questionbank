@@ -5,20 +5,19 @@ Cookie c[] = request.getCookies();
 
 boolean flag = false;
 for (int i = 0; i < c.length; i++) {
-	if (c[0].getName().equals("firstName")) {//firstName email 
+	if (c[i].getName().equals("firstName")) {//firstName email 
 		flag = true;
 		break;
 	}
 }
 
-	if(flag == false){
-		out.println("false");
-		request.getRequestDispatcher("Login.jsp").forward(request, response);
-			
-	}else{
-		out.println("true");
-	}
+if (flag == false) {
+	//request.getRequestDispatcher("Login.jsp").forward(request, response);
+	response.sendRedirect("Login.jsp");
+	return;
+}
 %>
+
 
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
 	<div

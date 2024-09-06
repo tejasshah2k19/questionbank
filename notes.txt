@@ -21,3 +21,35 @@ form submit -> method="post" ->servlet doPost
 	hyperlink -> url -> http -> GET -> doGet 
 	form -> method="post" -> http -> POST -> doPost   
 ---------------------------------------------------------
+session
+
+cookie 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

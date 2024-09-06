@@ -25,6 +25,12 @@
 				</a></li>
 				
 				
+				<li class="nav-item"><a class="nav-link"
+					href="SetTimeout.jsp"> <i
+						class="icon-paper menu-icon"></i> <span class="menu-title">Set Timeout</span>
+				</a></li>
+				
+				
 			</ul>
 		</nav>
  

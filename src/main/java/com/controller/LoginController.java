@@ -1,12 +1,14 @@
 package com.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.bean.UserBean;
 import com.dao.UserDao;
@@ -36,12 +38,15 @@ public class LoginController extends HttpServlet {
 			fn.setMaxAge(60 * 60 * 24);
 			response.addCookie(fn);
 			
+			HttpSession session = request.getSession(); 
+			session.setMaxInactiveInterval(60*5);
+			
 			if (user.getRole().equals("STUDENT")) {
-				request.getRequestDispatcher("StudentHome.jsp").forward(request, response);
-
+				//request.getRequestDispatcher("StudentHome.jsp").forward(request, response);
+				response.sendRedirect("StudentHome.jsp");
 			} else if (user.getRole().equals("ADMIN")) {
-				request.getRequestDispatcher("AdminHome.jsp").forward(request, response);
-
+				//request.getRequestDispatcher("AdminHome.jsp").forward(request, response);
+				response.sendRedirect("AdminHome.jsp");
 			}
 		}
 	}
