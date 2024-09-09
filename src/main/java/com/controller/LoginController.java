@@ -39,7 +39,8 @@ public class LoginController extends HttpServlet {
 			response.addCookie(fn);
 			
 			HttpSession session = request.getSession(); 
-			session.setMaxInactiveInterval(60*5);
+			session.setMaxInactiveInterval(60*3);
+			session.setAttribute("firstName", user.getFirstName());
 			
 			if (user.getRole().equals("STUDENT")) {
 				//request.getRequestDispatcher("StudentHome.jsp").forward(request, response);
